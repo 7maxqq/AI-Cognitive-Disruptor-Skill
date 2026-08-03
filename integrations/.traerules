@@ -1,0 +1,5 @@
+﻿{ 
+  "rules": [
+    { "trigger": "architecture_review", "action": "Apply Cognitive Disruptor Engine logic." }
+  ]
+}

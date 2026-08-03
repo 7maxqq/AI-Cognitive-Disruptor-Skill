@@ -1,0 +1,12 @@
+﻿{
+  "project_context": {
+    "primary_language": "C#",
+    "ui_framework": "WPF"
+  },
+  "industrial_constraints": {
+    "communication_protocols": ["Modbus TCP/RTU", "CAN bus"],
+    "hardware_specs": {
+      "thread_pool_restrictions": "Strict UI Thread isolation required"
+    }
+  }
+}
