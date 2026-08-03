@@ -1,5 +1,6 @@
-﻿{ 
+﻿{
   "rules": [
-    { "trigger": "architecture_review", "action": "Apply Cognitive Disruptor Engine logic." }
+    { "condition": "*.xaml.cs", "action": "Load [Arch_WPF_Decoupler]" },
+    { "condition": "modbus, CAN", "action": "Load [Protocol_Byte_Analyzer]" }
   ]
 }
