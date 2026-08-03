@@ -1,4 +1,4 @@
-# 🛠️ AI Cognitive Disruptor Skill — 通用 AI 技能引擎包，让AI跳出原有的思维框架
+# 🛠️ AI Cognitive Disruptor Skill — 让 AI 跳出思维框架
 
 <p align="center">
   <img src="https://img.shields.io/badge/Pattern-Prompt_as_Code-00ADD8?style=for-the-badge&logo=github" alt="Prompt as Code" />
@@ -11,148 +11,133 @@
 
 ## 📋 目录
 
-- [🌟 项目简介](#-项目简介)
+- [🌟 核心理念：为什么需要这个项目](#-核心理念为什么需要这个项目)
 - [🗂️ 仓库架构](#️-仓库架构)
-- [⚙️ 软件工程技能包](#️-软件工程技能包)
-- [🌌 通用认知破局引擎](#-通用认知破局引擎)
+- [⚙️ 技能总览](#️-技能总览)
+- [📖 如何使用这些技能](#-如何使用这些技能)
 - [🤖 自动加载规则](#-自动加载规则)
-- [🚀 快速开始](#-快速开始)
-- [📁 目录结构](#-目录结构)
 - [🧠 使用场景](#-使用场景)
+- [📁 目录结构](#-目录结构)
 - [🤝 贡献指南](#-贡献指南)
 - [📄 许可证](#-许可证)
 
 ---
 
-## 🌟 项目简介
+## 🌟 核心理念：为什么需要这个项目
 
-本项目是一个**标准化的 AI 技能引擎集合**，旨在将 LLM（大语言模型）的默认行为约束为**高级软件工程标准**。它通过精心设计的 **Prompt-as-Code** 技能包，引导 AI 从"平庸的默认预测"转向**高维度的工程解法**。
+### AI 的"默认思维陷阱"
 
-> 🎯 **核心理念**：不是让 AI 更快地给出答案，而是让 AI 给出**更好的答案**。
+AI（大语言模型）的底层工作原理是**预测下一个最可能的词**。这意味着：
 
-### 为什么需要这个项目？
+- 💬 问一个架构问题 → AI 给你最**常见**的方案
+- 💬 问一个 Bug 排障 → AI 给你最**主流**的排查步骤
+- 💬 问一个系统设计 → AI 给你最**流行**的技术组合
 
-| 问题 | 解决方案 |
-|------|----------|
-| LLM 默认输出"教科书式"的平庸方案 | 通过 **Cache Purge** 机制强制认知破局 |
-| 架构设计缺乏深度 | 通过 **First Principles** 剥离框架外衣，回归本质 |
-| 缺乏领域特定约束 | 通过 **Auto-Rules** 按上下文自动加载技能 |
-| 排障靠直觉而非方法论 | 通过 **Debug Analyzer** 系统化根因分析 |
+这不是 AI 的错，这是它的底层逻辑决定的。**但如果你想要的是"好答案"而非"标准答案"，你就需要一些外部的思维干预。**
+
+### 这个项目做了什么
+
+本项目是一个 **Prompt-as-Code** 技能引擎集合。每个技能就是一个**思维框架**，通过精心设计的指令，**强制 AI 跳出默认的思维惯性**：
+
+| 默认思维陷阱 | 对应技能 | 如何打破 |
+|-------------|----------|----------|
+| "代码能跑就行" | **Arch_Decoupler** | 强制检查依赖方向、边界、接口隔离 |
+| "凭经验猜 Bug" | **Debug_Analyzer** | 强制系统化二分法 + 全链路追踪 |
+| "AI 给的标准答案" | **Core_Disruptor** | 强制先否定常规方案，从第一性原理推导 |
+| "正向排障走不通" | **Inversion_Debugger** | 用逆向思维，"先想怎么制造 Bug" |
+| "选什么框架" | **First_Principles_Architect** | 剥离工具名词，回归数据流本质 |
+
+> 🎯 **一句话**：不是让 AI 更快地给出答案，而是让 AI 给出**更好的答案**。
 
 ---
 
 ## 🗂️ 仓库架构
 
-本仓库包含两个核心子系统：
-
 ```
 AI-Cognitive-Disruptor-Skill/
-├── 🏗️ 软件工程技能包              ← 面向通用软件工程场景
+├── 🏗️ 软件工程技能包              ← 偏向实操层面的工程技能
 │   ├── prompts/                  ← 核心提示词引擎
-│   ├── skills/                   ← 通用技能包
-│   └── integrations/             ← 自动加载规则配置
+│   ├── skills/                   ← 技能包
+│   └── integrations/             ← 自动加载规则
 │
-└── 🌌 Universal Cognitive Disruptor  ← 通用认知破局引擎
+└── 🌌 Universal Cognitive Disruptor  ← 偏向思维层面的认知破局
     ├── skills/                   ← 高维思维技能包
     └── integrations/             ← 自动加载规则
 ```
 
 ---
 
-## ⚙️ 软件工程技能包
+## ⚙️ 技能总览
 
-面向**通用软件工程开发**场景，覆盖架构设计、代码质量、调试排障等核心领域。
+### 🏗️ 软件工程技能包
 
-### 🔧 技能清单
+覆盖架构设计、代码质量、调试排障等实操领域。
 
-| 技能 ID | 目标 | 核心规则 |
-|---------|------|----------|
-| **Arch_Decoupler** | 强制实施架构层的关注点分离与模块解耦 | 🛑 禁止循环依赖 · 🛑 依赖倒置 · 🛑 接口隔离 · 🛑 事件驱动 · 🛑 边界清晰 |
-| **Debug_Analyzer** | 系统化诊断软件缺陷与性能问题 | 🛑 二分法缩小范围 · 🛑 可复现性优先 · 🛑 日志分层 · 🛑 全链路追踪 · 🛑 区分系统/业务错误 |
+| 技能 ID | 打破的思维惯性 | 核心规则 |
+|---------|--------------|----------|
+| **Arch_Decoupler** | "代码能跑就行" → 架构意识 | 🛑 禁止循环依赖 · 🛑 依赖倒置 · 🛑 接口隔离 · 🛑 事件驱动 · 🛑 边界清晰 |
+| **Debug_Analyzer** | "凭经验猜 Bug" → 系统化排障 | 🛑 二分法 · 🛑 可复现性优先 · 🛑 日志分层 · 🛑 全链路追踪 · 🛑 区分系统/业务错误 |
 
-### 🧩 核心引擎 (Core Disruptor)
+### 🌌 通用认知破局引擎
 
-核心提示词引擎，定义了 **5 阶段 XML 状态机** 输出规范，适用于任何技术栈和领域：
+偏向思维层面的认知框架，适用于任何复杂问题。
 
-```
-<cache_purge>          → 识别并拒绝平庸方案
-<first_principles>     → 剥离框架，定义原始物理/逻辑真理
-<orthogonal_mapping>   → 跨领域类比（流体力学、生物学、经济学等）
-<constraint_mutation>  → 施加强约束（内存、线程、时间、网络）
-<engineering_blueprint>→ 输出可落地的架构/代码
-```
-
-### 🏛️ Arch_Decoupler — 通用架构解耦
-
-适用于任何语言和框架的架构解耦原则：
-
-```
-依赖方向：Presentation → Application → Domain → Infrastructure
-```
-
-| 规则 | 描述 |
-|------|------|
-| 🔒 禁止循环依赖 | 依赖方向必须严格单向，Domain 层不引用任何外层 |
-| 🔄 依赖倒置 | 抽象定义在 Domain/Application 层，实现注入到 Infrastructure |
-| ✂️ 接口隔离 | 每个接口只包含调用方真正需要的方法 |
-| 📨 事件驱动 | 跨模块通信通过事件/消息，发布者不感知订阅者 |
-| 🧱 边界清晰 | 模块拥有明确的职责边界，通过防腐层（ACL）通信 |
-
-### 🔍 Debug_Analyzer — 通用调试与根因分析
-
-适用于任何语言和平台的系统化排障方法论：
-
-| 阶段 | 方法 | 典型工具 |
-|------|------|----------|
-| 🔍 问题界定 | 能否稳定复现？影响范围？最近变更？ | Git Blame / Changelog |
-| 📊 数据收集 | 日志、监控指标、堆栈、请求/响应样本 | ELK / Prometheus / Dump |
-| 🧪 假设验证 | 构造最小复现、A/B 测试、二分回滚 | 单元测试 / Feature Flag |
-| 🛠 根因定位 | 代码审查、数据流追踪、压力测试 | Debugger / Profiler / Trace |
-| ✅ 修复验证 | 回归测试、灰度发布、监控确认 | CI pipeline / 监控告警 |
+| 技能 ID | 打破的思维惯性 | 核心方法 |
+|---------|--------------|----------|
+| **Core_Disruptor** | "AI 只会给标准答案" | 5 阶段 XML 状态机：否定常规 → 第一性原理 → 跨界类比 → 极端约束 → 工程方案 |
+| **Inversion_Debugger** | "正向排障"的思维定式 | 逆向思维：先想"如何刻意制造这个 Bug" |
+| **First_Principles_Architect** | "选型思维"而非"设计思维" | 剥离工具名词 → 本质定义 → 极限推演 → 现代映射 |
 
 ---
 
-## 🌌 通用认知破局引擎 (Universal Cognitive Disruptor)
+## 📖 如何使用这些技能
 
-一个**通用**的 AI 认知破局技能包，适用于任何软件架构、算法设计或复杂排障场景。
+### 方式一：注入 AI System Prompt（推荐）
 
-### 🔧 技能清单
+将对应技能的 `.md` 文件内容**直接复制到 AI 工具的 System Prompt / 自定义指令中**，然后正常提问即可。
 
-| 技能 ID | 目标 | 适用场景 |
-|---------|------|----------|
-| **Core_Disruptor** | 核心拦截器，阻断常识，引入高维约束 | 任何架构/逻辑问题 |
-| **Inversion_Debugger** | 逆向排障，通过"刻意制造故障"推导防御策略 | 偶发 Bug、死锁、内存泄漏 |
-| **First_Principles_Architect** | 基于信息流与物理极限重构系统 | 系统设计、技术选型、高并发架构 |
-
-### 🧠 Inversion Debugger — 查理·芒格的逆向思维
-
-> 不要问"如何修复它"，而是问"如果要百分之百、极其稳定地触发这个灾难，我该如何设计系统？"
-
-输出规范：
-1. **恶意破坏蓝图** — 利用系统缺陷制造 Bug 的伪代码
-2. **防御塔映射** — 反推对应的防御代码/断言
-3. **根因定位脚本** — 生产环境捕捉"破坏瞬间"的脚本
-
-### 🏛️ First Principles Architect — 第一性原理架构
-
-```
-概念剥离 → 本质定义 → 极限推演 → 现代映射
+```bash
+# 复制技能内容到剪贴板
+cat skills/arch_decoupler.md | clip      # Windows
+cat skills/arch_decoupler.md | pbcopy    # macOS
 ```
 
-剥离"微服务/Redis/Kafka"等工具名词，在 1990 年代单机环境下推演最简数据流，再映射回现代技术栈。
+```bash
+# 复制认知破局引擎内容
+cat Universal-Cognitive-Disruptor/skills/core_disruptor.md | clip
+```
+
+### 方式二：Trae IDE 自动加载
+
+1. 克隆本仓库到本地
+2. 在 Trae IDE 中打开项目
+3. `integrations/.traerules` 会自动生效，按上下文加载对应技能
+
+### 方式三：手动触发关键词
+
+不想加载整个技能文件？在对话中直接说：
+- **Core_Disruptor** → "请用 Core Disruptor 模式分析这个问题"
+- **Inversion_Debugger** → "用逆向思维帮我推导这个 Bug 的根因"
+- **First_Principles_Architect** → "请用第一性原理重新设计这个系统"
+- **Arch_Decoupler** → "请用 Arch_Decoupler 原则审查这个架构"
+- **Debug_Analyzer** → "请按系统化排障方法论分析这个问题"
+
+### 方式四：组合使用
+
+多个技能可以叠加使用，效果更佳。例如：
+- 系统架构设计 → `Core_Disruptor` + `First_Principles_Architect` + `Arch_Decoupler`
+- 复杂 Bug 排障 → `Debug_Analyzer` + `Inversion_Debugger`
 
 ---
 
-## 🤖 自动加载规则 (Auto-Rules)
-
-本项目支持 **Trae IDE** 等 AI 编码工具的自动规则加载，实现技能包的**按需自动激活**。
+## 🤖 自动加载规则
 
 ### 软件工程技能包 (`integrations/.traerules`)
 
 ```json
 {
   "rules": [
-    { "condition": "architecture design, system design, refactoring, module decoupling",
+    { "condition": "architecture design, refactoring, module decoupling",
       "action": "Load [Arch_Decoupler]" },
     { "condition": "bug, crash, performance issue, debugging, root cause analysis",
       "action": "Load [Debug_Analyzer]" }
@@ -175,33 +160,17 @@ AI-Cognitive-Disruptor-Skill/
 
 ---
 
-## 🚀 快速开始
+## 🧠 使用场景
 
-### 方式一：Trae IDE 用户
-
-1. 克隆本仓库到本地：
-   ```bash
-   git clone https://github.com/7maxqq/AI-Cognitive-Disruptor-Skill.git
-   ```
-2. 在 Trae IDE 中打开项目，`integrations/.traerules` 会自动生效
-3. 输入架构设计相关问题时，`Arch_Decoupler` 技能自动加载
-4. 遇到 Bug 排查时，`Debug_Analyzer` 技能自动介入
-
-### 方式二：手动提示词注入
-
-将对应技能的 `.md` 文件内容作为 system prompt 注入到你的 AI 对话中：
-
-```bash
-# 示例：加载架构解耦技能
-cat skills/arch_decoupler.md | pbcopy   # macOS
-cat skills/arch_decoupler.md | clip      # Windows
-```
-
-### 方式三：ChatGPT / Claude / Cursor 自定义指令
-
-- 复制 `skills/` 或 `Universal-Cognitive-Disruptor/skills/` 下的技能文件
-- 粘贴到 AI 工具的自定义指令 / System Prompt 中
-- 根据场景按需加载对应技能
+| 场景 | 推荐技能组合 | 效果 |
+|------|-------------|------|
+| 🏛️ 系统架构设计 | `Arch_Decoupler` + `Core_Disruptor` + `First_Principles_Architect` | 拒绝平庸方案，输出高维架构 |
+| 🔧 代码重构/模块拆分 | `Arch_Decoupler` | 依赖倒置、接口隔离、边界清晰化 |
+| 🐛 复杂 Bug 排障 | `Debug_Analyzer` + `Inversion_Debugger` | 系统化二分法 + 逆向思维定位根因 |
+| 🔄 算法优化 | `Core_Disruptor` + `First_Principles_Architect` | 剥离框架，从数据流本质优化 |
+| 💥 偶发崩溃/死锁 | `Inversion_Debugger` + `Debug_Analyzer` | 制造 Bug 的思维推导防御策略 |
+| ⚡ 性能问题诊断 | `Debug_Analyzer` | 全链路追踪 + 日志分层分析 |
+| 📦 微服务/模块拆分 | `Arch_Decoupler` + `Core_Disruptor` | Bounded Context + 事件驱动解耦 |
 
 ---
 
@@ -214,7 +183,7 @@ AI-Cognitive-Disruptor-Skill/
 │   ├── core_disruptor.md                 #   Core Disruptor 引擎（XML 状态机）
 │   └── domain_modifiers.json             #   领域上下文配置
 │
-├── skills/                               # 通用软件工程技能
+├── skills/                               # 软件工程技能
 │   ├── arch_decoupler.md                 #   架构解耦技能
 │   └── debug_analyzer.md                 #   调试排障技能
 │
@@ -235,20 +204,6 @@ AI-Cognitive-Disruptor-Skill/
 
 ---
 
-## 🧠 使用场景
-
-| 场景 | 推荐技能组合 | 效果 |
-|------|-------------|------|
-| 🏛️ 系统架构设计 | `Arch_Decoupler` + `Core_Disruptor` + `First_Principles_Architect` | 拒绝平庸方案，输出高维架构 |
-| 🔧 代码重构/模块拆分 | `Arch_Decoupler` | 依赖倒置、接口隔离、边界清晰化 |
-| 🐛 复杂 Bug 排障 | `Debug_Analyzer` + `Inversion_Debugger` | 系统化二分法 + 逆向思维定位根因 |
-| 🔄 算法优化 | `Core_Disruptor` + `First_Principles_Architect` | 剥离框架，从数据流本质优化 |
-| 💥 偶发崩溃/死锁 | `Inversion_Debugger` + `Debug_Analyzer` | 制造 Bug 的思维推导防御策略 |
-| ⚡ 性能问题诊断 | `Debug_Analyzer` | 全链路追踪 + 日志分层分析 |
-| 📦 微服务/模块拆分 | `Arch_Decoupler` + `Core_Disruptor` | Bounded Context + 事件驱动解耦 |
-
----
-
 ## 🤝 贡献指南
 
 欢迎贡献新的技能包！请遵循以下规范：
@@ -259,7 +214,10 @@ AI-Cognitive-Disruptor-Skill/
    # [Skill_ID]: Your_Skill_Name
    # [Objective]: One-line description of the skill's purpose.
    ```
-3. **约束规则**：以 `## 🛑 约束规则` 开头，列出具体约束（建议 3-5 条）
+3. **核心结构**：每个技能文件应包含：
+   - `💡 为什么需要这个技能` — 说明它打破的是什么思维惯性
+   - `🛑 约束规则` — 具体的约束条件
+   - `📖 如何使用` — 使用方法说明
 4. **集成规则**：在 `integrations/.traerules` 中添加对应的自动加载规则
 5. **语言**：中英文均可，保持一致性即可
 
@@ -278,5 +236,5 @@ AI-Cognitive-Disruptor-Skill/
 </p>
 
 <p align="center">
-  <a href="#-ai-cognitive-disruptor-skill--通用软件工程-ai-技能引擎包">⬆️ 回到顶部</a>
+<a href="#-ai-cognitive-disruptor-skill--让-ai-跳出思维框架">⬆️ 回到顶部</a>
 </p>

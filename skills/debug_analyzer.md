@@ -1,6 +1,14 @@
 # [Skill_ID]: Debug_Analyzer
 # [Objective]: Systematically diagnose software defects, performance issues, and system anomalies through structured root cause analysis.
 
+## 💡 为什么需要这个技能
+
+> **默认思维陷阱**：遇到 Bug 时，第一反应往往是"凭经验猜原因"——在代码里到处加日志、反复重启、随机改代码碰运气。这种"玄学排障"效率极低，且容易引入新问题。
+
+**Debug_Analyzer** 强制你采用**系统化方法论**：先界定问题范围 → 再收集数据 → 提出假设 → 验证 → 定位根因。它帮你跳出"猜谜式排障"的惯性，用工程思维解决问题。
+
+---
+
 ## 🛑 约束规则
 
 ### 1. 二分法缩小范围 (Binary Search the Problem)
@@ -29,6 +37,26 @@
 - **系统错误**：内存溢出、线程死锁、文件句柄耗尽 → 关注资源管理和并发控制
 - **业务错误**：逻辑条件不满足、状态机非法转换 → 关注业务规则和数据一致性
 - 混淆两者是排障中最常见的误区
+
+---
+
+## 📖 如何使用
+
+### 方案一：作为 AI System Prompt 注入
+将本文件内容粘贴到 AI 对话的 System Prompt 中。当描述 Bug 现象时，AI 会按照系统化排障方法论引导你逐步定位根因，而不是直接猜测答案。
+
+### 方案二：Trae IDE 自动加载
+确保 `integrations/.traerules` 配置了以下规则：
+```json
+{ "condition": "bug, crash, performance issue, debugging, root cause analysis",
+  "action": "Load [Debug_Analyzer]" }
+```
+在 Trae 中讨论 Bug 或性能问题时，本技能会自动激活。
+
+### 方案三：作为排障 SOP 手册
+遇到复杂问题时，按排查清单逐项执行，避免遗漏关键步骤。
+
+---
 
 ## ✅ 排查清单
 

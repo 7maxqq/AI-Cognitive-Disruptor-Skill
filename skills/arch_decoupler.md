@@ -1,6 +1,14 @@
 # [Skill_ID]: Arch_Decoupler
 # [Objective]: Enforce strict separation of concerns and modular decoupling across all architectural layers.
 
+## 💡 为什么需要这个技能
+
+> **默认思维陷阱**：接到需求时，大脑的第一反应往往是"在哪个文件里加代码"——顺着现有代码结构继续堆砌。这种"加法思维"导致模块迅速腐化、耦合爆炸。
+
+**Arch_Decoupler** 强制你停下来思考：**这段代码真正属于哪里？它的依赖方向对吗？** 它帮你跳出"能跑就行"的惯性，建立清晰的架构边界意识。
+
+---
+
 ## 🛑 约束规则
 
 ### 1. 禁止循环依赖 (No Circular Dependencies)
@@ -28,11 +36,35 @@
 - 共享数据通过防腐层（Anti-Corruption Layer）转换，禁止直接共享内部模型
 - 模块间通信契约优先于实现细节
 
+---
+
+## 📖 如何使用
+
+### 方案一：作为 AI System Prompt 注入
+将本文件内容直接粘贴到 AI 对话的 System Prompt / 自定义指令中。当讨论架构设计、模块拆分、代码重构时，AI 会自动遵循上述约束规则输出方案。
+
+### 方案二：Trae IDE 自动加载
+确保 `integrations/.traerules` 配置了以下规则：
+```json
+{ "condition": "architecture design, refactoring, module decoupling",
+  "action": "Load [Arch_Decoupler]" }
+```
+在 Trae 中讨论架构相关话题时，本技能会自动激活。
+
+### 方案三：作为代码审查 Checklist
+将约束规则作为 Code Review 的检查清单：
+- ❓ 新模块的依赖方向是否正确？
+- ❓ 是否存在跨层直接引用？
+- ❓ 接口是否足够小且聚焦？
+- ❓ 模块间通信是否通过事件/消息？
+
+---
+
 ## ✅ 最佳实践
 
 | 场景 | 推荐做法 | 避免做法 |
 |------|----------|----------|
 | 模块间通信 | 事件总线 / 消息队列 | 直接调用内部方法 |
 | 数据访问 | 仓储接口定义在 Domain 层 | 直接在业务代码中使用 ORM |
-| UI 与逻辑 | ViewModel / Presenter 作为中介 | 代码后置文件写业务逻辑 |
+| UI 与逻辑 | ViewModel / Presenter 作为中介 | 在 UI 组件中直接写业务逻辑 |
 | 第三方库 | 通过适配器模式封装 | 在核心代码中直接引用 SDK |
