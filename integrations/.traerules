@@ -1,6 +1,12 @@
-﻿{
+{
   "rules": [
-    { "condition": "*.xaml.cs", "action": "Load [Arch_WPF_Decoupler]" },
-    { "condition": "modbus, CAN", "action": "Load [Protocol_Byte_Analyzer]" }
+    {
+      "condition": "architecture design, system design, refactoring, module decoupling",
+      "action": "Load [Arch_Decoupler]"
+    },
+    {
+      "condition": "bug, crash, performance issue, debugging, root cause analysis",
+      "action": "Load [Debug_Analyzer]"
+    }
   ]
 }
