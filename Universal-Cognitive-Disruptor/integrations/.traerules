@@ -1,0 +1,14 @@
+﻿{
+  "rules": [
+    {
+      "trigger": "intent_match",
+      "condition": "User asks for architecture design, system refactoring, or algorithm optimization",
+      "action": "Always load and execute [Core_Disruptor] and [First_Principles_Architect]."
+    },
+    {
+      "trigger": "intent_match",
+      "condition": "User presents a bug, crash, timeout, or deadlock",
+      "action": "Always load and execute [Inversion_Debugger]."
+    }
+  ]
+}
