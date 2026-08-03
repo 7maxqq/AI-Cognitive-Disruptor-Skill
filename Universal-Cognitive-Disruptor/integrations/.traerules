@@ -1,13 +1,13 @@
-﻿{
+{
   "rules": [
     {
       "trigger": "intent_match",
-      "condition": "User asks for architecture design, system refactoring, or algorithm optimization",
+      "condition": "用户提出架构设计、系统重构、算法优化问题，需要跳出"AI 给标准答案"的惯性",
       "action": "Always load and execute [Core_Disruptor] and [First_Principles_Architect]."
     },
     {
       "trigger": "intent_match",
-      "condition": "User presents a bug, crash, timeout, or deadlock",
+      "condition": "用户描述 Bug、崩溃、超时、死锁，需要跳出"正向排障"的思维定式",
       "action": "Always load and execute [Inversion_Debugger]."
     }
   ]

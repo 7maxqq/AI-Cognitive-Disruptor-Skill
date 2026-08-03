@@ -1,11 +1,11 @@
 {
   "rules": [
     {
-      "condition": "architecture design, system design, refactoring, module decoupling",
+      "condition": "讨论架构设计、模块拆分、代码重构，需要跳出"能跑就行"的惯性思维",
       "action": "Load [Arch_Decoupler]"
     },
     {
-      "condition": "bug, crash, performance issue, debugging, root cause analysis",
+      "condition": "排查 Bug、性能问题、系统崩溃，需要跳出"凭经验猜"的惯性思维",
       "action": "Load [Debug_Analyzer]"
     }
   ]

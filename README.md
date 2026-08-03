@@ -137,9 +137,9 @@ cat Universal-Cognitive-Disruptor/skills/core_disruptor.md | clip
 ```json
 {
   "rules": [
-    { "condition": "architecture design, refactoring, module decoupling",
+    { "condition": "讨论架构设计、模块拆分、代码重构，需要跳出\"能跑就行\"的惯性思维",
       "action": "Load [Arch_Decoupler]" },
-    { "condition": "bug, crash, performance issue, debugging, root cause analysis",
+    { "condition": "排查 Bug、性能问题、系统崩溃，需要跳出\"凭经验猜\"的惯性思维",
       "action": "Load [Debug_Analyzer]" }
   ]
 }
@@ -150,9 +150,9 @@ cat Universal-Cognitive-Disruptor/skills/core_disruptor.md | clip
 ```json
 {
   "rules": [
-    { "condition": "架构设计 / 系统重构 / 算法优化",
+    { "condition": "用户提出架构设计、系统重构、算法优化问题，需要跳出\"AI 给标准答案\"的惯性",
       "action": "Load [Core_Disruptor] + [First_Principles_Architect]" },
-    { "condition": "Bug / 崩溃 / 超时 / 死锁",
+    { "condition": "用户描述 Bug、崩溃、超时、死锁，需要跳出\"正向排障\"的思维定式",
       "action": "Load [Inversion_Debugger]" }
   ]
 }
