@@ -1,4 +1,4 @@
-# 🛠️ AI Cognitive Disruptor Skill — 通用软件工程 AI 技能引擎包
+# 🛠️ AI Cognitive Disruptor Skill — 通用 AI 技能引擎包，让AI跳出原有的思维框架
 
 <p align="center">
   <img src="https://img.shields.io/badge/Pattern-Prompt_as_Code-00ADD8?style=for-the-badge&logo=github" alt="Prompt as Code" />
